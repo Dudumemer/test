@@ -7,7 +7,7 @@ end
 
 local realconfigs = {
     logcheckcaller = false,
-    autoblock = false,
+    autoblock = true,
     funcEnabled = true,
     advancedinfo = false,
     --logreturnvalues = false,
@@ -267,6 +267,12 @@ local logs = {}
 local selected = nil
 --- The blacklist (can be a string name or the Remote Instance)
 local blacklist = {}
+blacklist["CanAttack"] = true
+blacklist["RequestAttack"] = true
+blacklist["GetUnlockedDifficultiesForDungeon"] = true
+blacklist["GetPartiesWithFriends"] = true
+blacklist["CanAd"] = true
+
 --- The block list (can be a string name or the Remote Instance)
 local blocklist = {}
 blocklist["Emit"] = true
