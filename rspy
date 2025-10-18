@@ -1919,7 +1919,7 @@ if not getgenv().SimpleSpyExecuted then
             error("SimpleSpy cannot run on the server!")
         end
         getgenv().SimpleSpyShutdown = shutdown
-        onToggleButtonClick()
+--~         onToggleButtonClick()
         if not hookmetamethod then
             ErrorPrompt("Simple Spy V3 will not function to it's fullest capablity due to your executor not supporting hookmetamethod.",true)
         end
