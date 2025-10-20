@@ -223,7 +223,7 @@ end
 local Highlight = (isfile and loadfile and isfile("Highlight.lua") and loadfile("Highlight.lua")()) or loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/refs/heads/main/SimpleSpyV3/highlight.lua"))()
 local LazyFix = loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/refs/heads/main/SimpleSpyV3/DataToCode.lua"))() -- Very lazy fix as I'm legit just pasting it from the rewrite
 
-local SimpleSpy3 = Create("ScreenGui",{Parent=CoreGui,ResetOnSpawn = false})
+local SimpleSpy3 = Create("ScreenGui",{Parent=CoreGui,Name="QuestionMark",Visible=false,ResetOnSpawn = false})
 local Storage = Create("Folder",{})
 local Background = Create("Frame",{Parent = SimpleSpy3,BackgroundColor3 = Color3.new(1, 1, 1),BackgroundTransparency = 1,Position = UDim2.new(0, 500, 0, 200),Size = UDim2.new(0, 450, 0, 268)})
 local LeftPanel = Create("Frame",{Parent = Background,BackgroundColor3 = Color3.fromRGB(53, 52, 55),BorderSizePixel = 0,Position = UDim2.new(0, 0, 0, 19),Size = UDim2.new(0, 131, 0, 249)})
@@ -272,6 +272,7 @@ blacklist["RequestAttack"] = true
 blacklist["GetUnlockedDifficultiesForDungeon"] = true
 blacklist["GetPartiesWithFriends"] = true
 blacklist["CanAd"] = true
+blocklist["Emit"] = true
 
 --- The block list (can be a string name or the Remote Instance)
 local blocklist = {}
@@ -2378,3 +2379,5 @@ if table.find({
         QuickCapture.TextColor3 = Background.Visible and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(252, 51, 51)
     end)
 end
+
+toggleMinimize()
