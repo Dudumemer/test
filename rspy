@@ -2379,5 +2379,3 @@ if table.find({
         QuickCapture.TextColor3 = Background.Visible and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(252, 51, 51)
     end)
 end
-
-toggleMinimize(true)
