@@ -272,7 +272,7 @@ blacklist["RequestAttack"] = true
 blacklist["GetUnlockedDifficultiesForDungeon"] = true
 blacklist["GetPartiesWithFriends"] = true
 blacklist["CanAd"] = true
-blocklist["Emit"] = true
+blacklist["Emit"] = true
 
 --- The block list (can be a string name or the Remote Instance)
 local blocklist = {}
